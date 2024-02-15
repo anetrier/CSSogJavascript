@@ -22,7 +22,15 @@
    --bgB: rgb(143, 225, 142); 
 
    /* OPGAVE 1: definer en palette med mindst 5 egentlige farver plus kontrasterne sort og hvid */
- }
+ 
+   --kontrast1: #000000;
+   --kontrast2: #ffffff;
+   --farve3:  rgb(215, 4, 4); 
+   --farve4: rgb(29, 157, 27); 
+   --farve5:  rgb(85, 9, 237);   
+   --farve6:  rgb(160, 115, 245);
+   --farve7:  rgb(238, 15, 189); 
+  }
 
 /* Logo: vælg selv størrelsen */
 #logo {
@@ -34,7 +42,7 @@
 /* responsive billeder */
 .resp {
   width: 100%;
-  height: autox;
+  height: auto;
 }
 
 header,
@@ -44,6 +52,15 @@ footer {
 }
 
 /* OPGAVE 3: Store skærme: Skjul .smaller og .burger med CSS */
+
+.smaller,
+.burger {
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  visibility: hidden;
+}
+}
 
 /* OPGAVE 4: Flexbox
 
@@ -55,6 +72,15 @@ d) Brug justify-content til at fordele dine kolonner. Prøv alle muligheder.
 Se: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content
 
 */
+
+.row {
+  display: flex;
+  column-width: 33%;
+  padding: 32px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
 
 /* OPGAVE 5: Responsivt design
 
@@ -79,6 +105,9 @@ Herunder ser du de responsive regler, der skal redigeres.
   body {
     /* brug dine variabler her! */
     background-color: var(--bgB); 
+  }
+  .row {
+    display: block;
   }
 }
 

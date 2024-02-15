@@ -4,6 +4,31 @@
  **/
 console.log('Der er kontakt til js/js.js')
 
+/**variabler */
+
+let a = "Ane" // streng
+let b = 23 // tal
+let c = false
+let julemandenFindes = false
+
+const and = "Peking"
+
+alert("Hej " + a)
+
+console.log(b * b)
+console.log("Findes julemanden virkelig? " + julemandenFindes)
+
+/**kontrolstrukturer */
+
+if (julemandenFindes === true) {
+    console.log("Ja")
+  } else {
+    console.log("Nej")
+  }
+
+/** InnerHTML: sådan */
+document.getElementById("titel").innerHTML = "Mojn Do!"
+
 /**
  * JavaScript Introduktion
  */
@@ -27,3 +52,9 @@ function viseSkjule() {
     // flere toggles mv. kan tilføjes her
  }
  */
+
+ function viseSkjule(){
+    alert("Tak for i dag!")
+    document.getElementById("titel").innerHTML = "Special for you my friend"
+
+ }
